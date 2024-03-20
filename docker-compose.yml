@@ -1,0 +1,11 @@
+services:
+   app:
+      build:
+        context: ./app
+        dockerfile: Dockerfile
+      container_name: pdf-coord-visualizer
+      volumes:
+        - ./app:/app
+      tty: true
+      stdin_open: true
+      command: python app.py
